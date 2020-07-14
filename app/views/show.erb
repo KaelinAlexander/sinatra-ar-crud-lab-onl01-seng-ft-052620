@@ -1,10 +1,19 @@
 <html>
 <body>
+<<<<<<< HEAD
 <h2><%= @article.title %></h2>
 <br>
 <h4><%= @article.content %></h4>
 <form action='/articles/<%= @article.id %>' method='post'>
   <input id='hidden' type='hidden' name='_method' value="DELETE">
   <input type="submit" value="Delete">
+=======
+<h2><%= article.title %></h2>
+<br>
+<h4><%= article.content %></h4>
+<form method='post' action="/articles/<%= @model.id %>">
+
+</form>
+>>>>>>> 813dc1457ae31fe15ad2a3905005fd1fcf81293b
 </body>
 </html>

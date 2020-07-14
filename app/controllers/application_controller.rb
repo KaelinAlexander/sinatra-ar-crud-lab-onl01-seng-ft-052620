@@ -30,7 +30,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/:id' do
+<<<<<<< HEAD
     @article = Article.find(params[:id])
+=======
+    @article = Article.find([:id])
+>>>>>>> 813dc1457ae31fe15ad2a3905005fd1fcf81293b
     erb :show
   end
 
@@ -40,6 +44,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/:id/edit' do
+<<<<<<< HEAD
     @article = Article.find(params[:id])
     erb :edit
   end
@@ -55,5 +60,15 @@ class ApplicationController < Sinatra::Base
     @article.destroy
     redirect "/articles"
   end
+=======
+    erb :edit
+  end
+
+  patch 'articles/:id' do
+    erb :show
+  end
+
+  # delete '/articles/:id' do
+>>>>>>> 813dc1457ae31fe15ad2a3905005fd1fcf81293b
 
 end
